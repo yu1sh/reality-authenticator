@@ -1,0 +1,169 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  background: #eef2f6;
+  color: #17202a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page-shell {
+  width: min(960px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.hero {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: #52616f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+.status {
+  display: inline-block;
+  margin: 8px 0 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.status-accepted,
+.status-valid {
+  background: #d7f4df;
+  color: #12602e;
+}
+
+.status-warning {
+  background: #fff0bf;
+  color: #6b4d00;
+}
+
+.status-invalid,
+.status-rejected {
+  background: #ffe1de;
+  color: #8b1e17;
+}
+
+.status-not_found {
+  background: #e5e9ee;
+  color: #39434d;
+}
+
+.panel,
+.notice {
+  margin-bottom: 18px;
+  padding: 22px;
+  border: 1px solid #d7dee6;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+dl {
+  margin: 0;
+}
+
+dl div {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.4fr) 1fr;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0f3;
+}
+
+dl div:last-child {
+  border-bottom: 0;
+}
+
+dt {
+  color: #52616f;
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+}
+
+.mono {
+  font-family: ui-monospace, monospace;
+}
+
+.break {
+  overflow-wrap: anywhere;
+}
+
+.checks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.check-pass strong {
+  color: #12602e;
+}
+
+.check-fail strong {
+  color: #8b1e17;
+}
+
+.check-warning strong {
+  color: #6b4d00;
+}
+
+.qr-panel {
+  text-align: center;
+}
+
+.qr {
+  width: min(256px, 100%);
+  height: auto;
+}
+
+.qr-placeholder {
+  padding: 48px;
+  color: #52616f;
+  background: #f2f4f7;
+}
+
+.notice {
+  color: #39434d;
+  background: #fff9e8;
+  border-color: #ebdca9;
+}
+
+@media (max-width: 600px) {
+  .page-shell {
+    width: min(100% - 20px, 960px);
+    padding-top: 24px;
+  }
+
+  dl div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

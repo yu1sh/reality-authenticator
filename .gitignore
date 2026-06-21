@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+
+# Local configuration and secrets
+.env
+*.env.local
+local.settings.json
+
+# Generated evidence and build output
+output/
+reality-evidence/
+.local-data/
+dist/
+build/
+.deployment/
+*.zip
+.azure/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store

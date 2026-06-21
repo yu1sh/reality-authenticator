@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reality-cloud"
+version = "0.1.0"
+description = "Local Azure Functions API for Reality Authenticator"
+requires-python = ">=3.11"
+dependencies = [
+    "azure-functions>=1.21,<2",
+    "azure-identity>=1.19,<2",
+    "azure-keyvault-keys>=4.10,<5",
+    "azure-storage-blob>=12.24,<13",
+    "azure-data-tables>=12.6,<13",
+    "qrcode[pil]>=8,<9",
+    "reality-core>=0.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["reality_cloud*"]

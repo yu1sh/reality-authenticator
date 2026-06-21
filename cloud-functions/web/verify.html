@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reality Authenticator 検証結果</title>
+  <link rel="stylesheet" href="/assets/verify.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Reality Authenticator</p>
+      <h1>Proof 検証結果</h1>
+      <div class="status status-$state_class">$state</div>
+      <p class="message">$message</p>
+    </header>
+
+    <section class="panel summary">
+      <h2>Proof Record</h2>
+      <dl>
+        <div><dt>Proof ID</dt><dd class="mono">$proof_id</dd></div>
+        <div><dt>Device ID</dt><dd>$device_id</dd></div>
+        <div><dt>取得時刻</dt><dd>$captured_at</dd></div>
+        <div><dt>発行時刻</dt><dd>$created_at</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>チャレンジ</h2>
+      <dl>
+        <div><dt>種別</dt><dd>$challenge_type</dd></div>
+        <div><dt>必要なボタン回数</dt><dd>$button_required</dd></div>
+        <div><dt>実際のボタン回数</dt><dd>$button_actual</dd></div>
+        <div><dt>結果</dt><dd>$challenge_result</dd></div>
+        <div><dt>音声照合</dt><dd>$voice_verification</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>証拠データ</h2>
+      <dl>
+        $sensor_rows
+        <div><dt>Image SHA-256</dt><dd class="mono break">$image_sha256</dd></div>
+        <div><dt>Audio SHA-256</dt><dd class="mono break">$audio_sha256</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>完全性情報</h2>
+      <dl>
+        <div><dt>Manifest Hash</dt><dd class="mono break">$manifest_hash</dd></div>
+        <div><dt>Record Hash</dt><dd class="mono break">$record_hash</dd></div>
+        <div><dt>署名方式</dt><dd>$signature_algorithm</dd></div>
+        <div><dt>署名 Key ID</dt><dd class="mono break">$key_id</dd></div>
+        <div><dt>署名時刻</dt><dd>$signed_at</dd></div>
+        <div><dt>署名</dt><dd class="mono break">$signature</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>検証項目</h2>
+      <ul class="checks">$check_rows</ul>
+    </section>
+
+    <section class="panel warnings">
+      <h2>警告</h2>
+      <ul>$warning_rows</ul>
+    </section>
+
+    <section class="panel qr-panel">
+      <h2>検証 QR</h2>
+      $qr_markup
+      <p>読み取ると、この検証ページを開きます。</p>
+    </section>
+
+    <footer class="notice">
+      <strong>重要な制限</strong>
+      <p>このページは、登録済み端末で取得されたセンサ値、画像、音声、時刻、
+      ハッシュ値、電子署名を確認するものです。法的な電子証明書、本人確認、
+      AI を使用していないことの証明ではありません。$signing_notice</p>
+      <p>画像・音声そのものは公開せず、ハッシュ値のみ表示しています。</p>
+    </footer>
+  </main>
+</body>
+</html>
